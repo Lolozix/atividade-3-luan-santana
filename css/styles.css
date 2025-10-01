@@ -1,150 +1,84 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
- 
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff5f5; 
-    color: #660000; 
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background-color: #b22222;
-    box-shadow: 0 4px 8px rgba(178, 34, 34, 0.5);
-    flex-wrap: wrap;
-  }
-  
-  .header__logo {
-    height: 50px;
-    border-radius: 8px;
-    border: 2px solid #800000;
-  }
-  
-  .header__nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-  }
-  
-  .header__nav a {
-    text-decoration: none;
-    color: #ffe5e5; 
-    font-weight: 600;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .header__nav a:hover {
-    color: #ff3333; 
-  }
+body {
+  background-color: #0d1a2d;
+  font-family: 'Outfit', sans-serif;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
 
-  .card-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 40px 10%;
-  }
-  
-  .card {
-    background-color: #fff0f0; 
-    border-radius: 15px;
-    box-shadow: 0 12px 24px rgba(178, 34, 34, 0.25);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(178, 34, 34, 0.5);
-  }
-  
+.nft-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
 
-  .card__image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 3px solid #b22222;
-  }
-  
-  .card__info {
-    padding: 20px;
-  }
-  
-  .card__title {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: #b22222;
-  }
-  
-  .card__author {
-    font-size: 0.9rem;
-    color: #800000; 
-    margin-bottom: 10px;
-  }
-  
-  .card__author-name {
-    font-weight: 700;
-    color: #cc0000; 
-  }
-  
-  .card__price {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #660000;
-  }
-  
-  .card__price-value {
-    color: #cc0000;
-  }
-  
-  .card__link {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #b22222;
-    color: white;
-    border-radius: 30px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .card__link:hover {
-    background-color: #800000;
-  }
-  
-  .footer {
-    background-color: #b22222;
-    color: #ffe5e5;
-    text-align: center;
-    padding: 15px 10%;
-    margin-top: 40px;
-    font-weight: 600;
-  }
-  
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
-    .header__nav ul {
-      justify-content: center;
-    }
-  
-    .card-list {
-      padding: 20px 5%;
-    }
-  }
-  
+.nft-card {
+  background-color: #14253d;
+  border-radius: 15px;
+  overflow: hidden;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+
+.nft-card__image {
+  width: 100%;
+  height: 50%;
+  display: block;
+}
+
+.nft-card__content {
+  padding: 20px;
+}
+
+.nft-card__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.nft-card__description {
+  font-size: 14px;
+  color: #ada0f5;
+  margin: 20px;
+}
+
+.nft-card__details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin: 20px;
+}
+
+.nft-card__price {
+  color: #4dc7bd;
+  font-weight: bold;
+}
+
+.nft-card__time {
+  color: #ffffff;
+}
+
+.nft-card__creator {
+  display: flex;
+  align-items: center;
+  border-top: 3px solid #314868;
+  padding-top: 15px;
+}
+
+.nft-card__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 500%;
+  margin-right: 10px;
+}
