@@ -27,7 +27,7 @@ body {
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
+  transition: transform 3s ease;
 }
 
 
@@ -82,3 +82,24 @@ body {
   border-radius: 500%;
   margin-right: 10px;
 }
+
+@keyframes pulseHover {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+.nft-card {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.nft-card:hover {
+  transform: rotateY(50deg);
+  cursor: pointer;
+}
+
+
